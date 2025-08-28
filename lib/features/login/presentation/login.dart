@@ -4,8 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:school_app/assignmet/presentation/create.dart';
 import 'package:school_app/core/utils/color_const.dart';
-import 'package:school_app/core/utils/string_const.dart';
-import 'package:school_app/features/dashboard/presentation/dashboard.dart';
 import 'package:school_app/features/signup/presentation/signup.dart';
 import 'package:school_app/widgets/custom_elevatedbutton.dart';
 import 'package:school_app/widgets/custom_textformfield.dart';
@@ -76,7 +74,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       body: Stack(
         children: [
-          // 🔵 Blue background
+          // Blue background
           Container(
             height: double.infinity,
             width: double.infinity,
@@ -105,7 +103,7 @@ class _LoginState extends State<Login> {
             ),
           ),
 
-          // 🧾 White Card Overlay
+          // White Card Overlay
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -140,7 +138,7 @@ class _LoginState extends State<Login> {
                       ),
                       const SizedBox(height: 20),
 
-                      /// ✉️ Email Field
+                      /// Email Field
                       CustomTextform(
                         controller: emailController,
                         labelText: 'Email',
@@ -152,7 +150,7 @@ class _LoginState extends State<Login> {
                       ),
                       const SizedBox(height: 15),
 
-                      /// 🔒 Password Field
+                      /// Password Field
                       CustomTextform(
                         controller: passwordController,
                         labelText: 'Password',
@@ -175,7 +173,7 @@ class _LoginState extends State<Login> {
                         onChanged: (val) => passwordController.text = val,
                       ),
 
-                      /// ✅ Remember & Forgot password
+                      /// Remember & Forgot password
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -196,7 +194,7 @@ class _LoginState extends State<Login> {
                       ),
                       const SizedBox(height: 10),
 
-                      /// 🔵 Login Button
+                      /// Login Button
                       CustomElevatedButton(
                         backgroundColor: secondaryColor,
                         onPressed: () {
@@ -216,7 +214,7 @@ class _LoginState extends State<Login> {
 
                       const SizedBox(height: 20),
 
-                      /// 🆕 Sign Up link
+                      /// Sign Up link
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

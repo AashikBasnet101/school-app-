@@ -73,7 +73,7 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       body: Stack(
         children: [
-          // 🔵 Top blue background
+          // Top blue background
           Container(
             width: double.infinity,
             height: double.infinity,
@@ -102,7 +102,7 @@ class _SignupState extends State<Signup> {
             ),
           ),
 
-          // 🧾 White card overlay
+          // White card overlay
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(

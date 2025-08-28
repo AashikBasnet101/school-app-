@@ -132,7 +132,7 @@ class _CreateAssignmentState extends State<CreateAssignment> {
     return Scaffold(
       body: Stack(
         children: [
-          // 🔵 Top blue header
+          // Top blue header
           Container(
             width: double.infinity,
             height: double.infinity,
@@ -161,7 +161,7 @@ class _CreateAssignmentState extends State<CreateAssignment> {
             ),
           ),
 
-          // 🧾 White form container
+          //  White form container
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
