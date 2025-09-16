@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:school_app/assignmet/presentation/create.dart';
+import 'package:school_app/core/utils/api.dart';
 import 'package:school_app/core/utils/color_const.dart';
 import 'package:school_app/features/signup/presentation/signup.dart';
 import 'package:school_app/widgets/custom_elevatedbutton.dart';
@@ -23,12 +24,10 @@ class _LoginState extends State<Login> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  Future<void> loginUser(Map<String, dynamic> userData) async {
-    const String apiUrl = "https://9e24f3e873c1.ngrok-free.app/login";
-
+  Future<void> loginUser(Map<String, dynamic> userData, String api) async {
     try {
       final response = await http.post(
-        Uri.parse(apiUrl),
+        Uri.parse(api),
         headers: {"Content-Type": "application/json"},
         body: json.encode(userData),
       );
@@ -205,7 +204,7 @@ class _LoginState extends State<Login> {
                               "password": passwordController.text,
                             };
 
-                            loginUser(userData); // Call API
+                            loginUser(userData, AppApi.login); // Call API
                           }
                         },
 

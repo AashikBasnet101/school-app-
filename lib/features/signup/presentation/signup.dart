@@ -20,7 +20,7 @@ class _SignupState extends State<Signup> {
 
   bool isObscurePassword = true;
   Future<void> signupUser(Map<String, dynamic> userData) async {
-    const String apiUrl = "https://9e24f3e873c1.ngrok-free.app/createUser";
+    const String apiUrl = "https://7efdb0a73258.ngrok-free.app/createUser";
 
     try {
       final response = await http.post(
